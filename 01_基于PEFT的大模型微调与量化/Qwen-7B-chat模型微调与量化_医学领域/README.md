@@ -4,9 +4,10 @@
 
 基座模型：Qwen-7B-Chat（将模型下载到本地）
 
-数据集：Chinese-Med-Dialogue [地址](https://github.com/zhangsheng93/cMedQA2) 将数据集下载到dataset数据集中，解压
+数据集：Chinese-Med-Dialogue [地址](https://github.com/zhangsheng93/cMedQA2) 将数据集下载到dataset数据集中，解压。
 
 ![image-20250806205729297](dataset\ai.png)
+
 $$
 我也可以谈，我也可以爱国。
 $$
@@ -63,5 +64,6 @@ $$
 4-bit 量化配置（BitsAndBytesConfig）
 
 > 4-bit 量化仅用于**存储权重**，实际计算（如矩阵乘法、激活值处理）仍需较高精度（否则会导致数值溢出或精度丢失）。
+
 
 
