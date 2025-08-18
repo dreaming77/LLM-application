@@ -127,6 +127,10 @@ hf_pipeline = pipeline(
     temperature=0.1
 )
 llm = HuggingFacePipeline(pipeline=hf_pipeline)
+'''
+HuggingFacePipeline用于快速构建和部署基于预训练模型的 NLP 任务流水线（Pipeline）。
+它封装了模型加载、输入预处理、模型推理和输出后处理的完整流程
+'''
 
 # ============= 配置RAG Fusion检索器 =============
 base_retriever = vector_db.as_retriever(
@@ -156,4 +160,5 @@ qa_chain = RetrievalQA.from_chain_type(
     chain_type_kwargs={"prompt": prompt},
     return_source_documents=True
 )
+
 
