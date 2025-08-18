@@ -32,6 +32,12 @@ $$
 4. RAG_Chain：初始化LLM组件——>配置RAG Fusion检索器（创建查询链、创建RAG Fusion检索器）——>创建优化后的Langchain问答链
 5. 使用streamlit做个简单的UI
 
+> 语义边界动态方法介绍——————该方法采用规则切分和语义切分相结合的方式
+> 
+>
+>
+>
+
 ## 具体步骤：
 
 1. 将嵌入模型、Qwen2.5-3B-Instruct模型下载到本地
@@ -82,6 +88,7 @@ app.py
 
 
 运行 `streamlit run app.py`
+
 
 
 
