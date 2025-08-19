@@ -6,7 +6,7 @@
 
 数据集：Twitter_complaints [地址](https://huggingface.co/datasets/ought/raft) 将data文件夹里的csv文件下载到数据集中。
 
-![image-20250806205729297](img src="ai.jpeg" style="zoom:33%;" )
+![image-20250806205729297](ai.jpeg)
 
 $$
 平平无奇
