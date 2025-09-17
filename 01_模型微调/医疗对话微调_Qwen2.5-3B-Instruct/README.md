@@ -3,6 +3,7 @@
 技术栈：PEFT、LoRA
 
 基座模型：Qwen-3B-Instruct（将模型下载到本地）
+句子转换器模型：paraphrase-multilingual-MiniLM-L12-v2 
 
 数据集：Chinese-medical-dialogue-data [地址](https://github.com/Toyhom/Chinese-medical-dialogue-data) 将数据集下载到dataset数据集中，解压。
 
