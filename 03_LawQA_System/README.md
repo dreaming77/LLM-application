@@ -8,6 +8,14 @@
 
 数据集：民法典pdf、刑法docx文档
 
+> GanymedeNil/text2vec-large-chinese 是一款专为中文语义理解优化的开源文本嵌入模型，基于 LERT（Language Encoder Representations from Transformers）架构构建，专注于中文文本的语义向量生成和相似度计算。
+> 
+> 架构升级：基于 HFL（华为诺亚方舟实验室）的 chinese-lert-large 模型改造，替换传统 MacBERT 为 LERT 架构，融合词性标注、命名实体识别、语法依存等语言学特征，显著提升中文语义理解能力。
+> 
+> 参数规模：采用 24 层 Transformer 编码器，隐藏层维度 1024，注意力头数 16，参数量约 326M，在性能与部署成本间取得平衡。
+>
+> 输入支持：最大序列长度 512 tokens，适合处理对话、短文本等场景，对长文本可通过截断或分块优化。
+
 ![image-20250806205729297](dataset/ai.png)
 
 $$
@@ -96,6 +104,7 @@ app.py
 
 
 运行 `streamlit run app.py`
+
 
 
 
