@@ -4,7 +4,7 @@
 
 问答模型：Qwen2.5-3B-Instruct
 
-嵌入模型：GanymedeNil/text2vec-large-chinese
+嵌入模型：text2vec-large-chinese
 
 数据集：civil_code.pdf、penal_code.txt、corporation_law.docx
 
@@ -104,6 +104,7 @@ app.py
 
 
 运行 `streamlit run app.py`
+
 
 
 
