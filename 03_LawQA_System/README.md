@@ -6,7 +6,7 @@
 
 嵌入模型：GanymedeNil/text2vec-large-chinese
 
-数据集：民法典pdf、刑法docx文档
+数据集：civil_code.pdf、penal_code.txt、corporation_law.docx
 
 > GanymedeNil/text2vec-large-chinese 是一款专为中文语义理解优化的开源文本嵌入模型，基于 LERT（Language Encoder Representations from Transformers）架构构建，专注于中文文本的语义向量生成和相似度计算。
 > 
@@ -104,6 +104,7 @@ app.py
 
 
 运行 `streamlit run app.py`
+
 
 
 
