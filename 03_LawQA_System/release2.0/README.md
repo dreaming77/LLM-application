@@ -25,19 +25,7 @@ $$
 
 ## 模块结构
 
-法律问答系统
-├── 文档处理模块
-│   ├── 法律文档分割器
-│   └── 向量嵌入与存储
-├── 检索模块
-│   └── RAG Fusion检索器
-├── 对话管理模块
-│   ├── 多轮对话记忆
-│   ├── 提示词工程
-│   └── 回答生成器
-└── 输出模块
-    ├── 流式输出
-    └── 引用溯源
+![image-2006205729297](dataset/dir_1.png)
 
 > pycharm 自定义的包找不到的解决方案。文件 - 设置 - 项目 -项目结构 - 添加内容根，把需要的路径添加到内容根里面。
 >
@@ -49,29 +37,7 @@ $$
 
 ## 项目结构
 
-legal_qa_system/
-│
-├── config/
-│   └── settings.py          		# 配置文件
-├── data/
-│   ├── raw/                			# 原始法律文档
-│   └── processed/      		    # 处理后的数据
-├── models/
-│   ├── text2vec-large-chinese/    # 嵌入模型
-│   └── Qwen2.5-3B-Instruct/       # 生成模型
-├── vector_store/
-│   └── law_faiss_index/       	    # FAISS向量存储
-├── utils/
-│   ├── __init__.py
-│   ├── document_processor.py      # 文档处理工具
-│   ├── rag_fusion.py             		 # RAG Fusion实现
-│   ├── prompt_templates.py        # 提示词模板
-│   └── tools.py                   		# 外部工具
-├── chains/
-│   ├── __init__.py
-│   ├── conversational_qa.py    	   # 对话链实现
-│   └── retrieval_qa.py          	  # 检索QA链实现
-└──  app.py                         		# 主应用程序
+![image-20205729297](dataset/dir_2.png)
 
 ## 现实过程
 
@@ -112,5 +78,7 @@ legal_qa_system/
 
 ​	自定义对话内存，继承ConversationBufferWindowMemory类对话记忆。
 
-项目运行`streamlit run app.py`
+
+7. 项目运行`streamlit run app.py`
+
 
