@@ -1,0 +1,342 @@
+2025-09-05 21:25:53,331 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-05 21:25:58,038 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-05 21:25:58,039 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-05 21:25:58,039 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-05 21:25:58,040 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-05 21:25:58,040 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-05 21:26:38,985 - core.nodes - ERROR - 准备模型输入时发生错误: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.
+2025-09-05 21:26:39,549 - core.nodes - INFO - 开始综合信息
+2025-09-05 21:26:39,549 - core.nodes - WARNING - 文档数量过多，仅使用前 10 个文档
+2025-09-05 21:26:39,550 - core.nodes - INFO - 综合信息上下文长度: 3345
+2025-09-05 21:26:39,550 - core.nodes - INFO - 准备模型输入，文本长度: 3532
+2025-09-05 21:26:39,550 - core.nodes - ERROR - 准备模型输入时发生错误: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.
+2025-09-05 21:26:39,550 - core.nodes - ERROR - 无法准备模型输入
+2025-09-05 21:26:39,551 - core.nodes - INFO - 开始生成报告
+2025-09-05 21:26:39,551 - core.nodes - INFO - 准备模型输入，文本长度: 255
+2025-09-05 21:26:39,551 - core.nodes - ERROR - 准备模型输入时发生错误: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.
+2025-09-05 21:26:39,551 - core.nodes - ERROR - 无法准备模型输入
+2025-09-05 21:33:49,443 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-05 21:33:54,176 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-05 21:33:54,176 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-05 21:33:54,176 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-05 21:33:54,177 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-05 21:33:54,177 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-05 21:34:55,660 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-05 21:35:00,221 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-05 21:35:00,221 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-05 21:35:00,222 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-05 21:35:00,222 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-05 21:35:00,222 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-05 21:35:48,234 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-05 21:35:52,798 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-05 21:35:52,798 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-05 21:35:52,798 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-05 21:35:52,799 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-05 21:35:52,799 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-05 21:36:23,219 - core.nodes - ERROR - 准备模型输入时发生错误: full() received an invalid combination of arguments - got (tuple, NoneType, dtype=torch.dtype), but expected one of:
+ * (tuple of ints size, Number fill_value, *, tuple of names names, torch.dtype dtype = None, torch.layout layout = None, torch.device device = None, bool pin_memory = False, bool requires_grad = False)
+ * (tuple of ints size, Number fill_value, *, Tensor out = None, torch.dtype dtype = None, torch.layout layout = None, torch.device device = None, bool pin_memory = False, bool requires_grad = False)
+
+2025-09-05 21:36:23,774 - core.nodes - INFO - 开始综合信息
+2025-09-05 21:36:23,774 - core.nodes - WARNING - 文档数量过多，仅使用前 10 个文档
+2025-09-05 21:36:23,774 - core.nodes - INFO - 综合信息上下文长度: 3345
+2025-09-05 21:36:23,774 - core.nodes - INFO - 准备模型输入，文本长度: 3532
+2025-09-05 21:36:23,782 - core.nodes - ERROR - 准备模型输入时发生错误: full() received an invalid combination of arguments - got (tuple, NoneType, dtype=torch.dtype), but expected one of:
+ * (tuple of ints size, Number fill_value, *, tuple of names names, torch.dtype dtype = None, torch.layout layout = None, torch.device device = None, bool pin_memory = False, bool requires_grad = False)
+ * (tuple of ints size, Number fill_value, *, Tensor out = None, torch.dtype dtype = None, torch.layout layout = None, torch.device device = None, bool pin_memory = False, bool requires_grad = False)
+
+2025-09-05 21:36:23,782 - core.nodes - ERROR - 无法准备模型输入
+2025-09-05 21:36:23,783 - core.nodes - INFO - 开始生成报告
+2025-09-05 21:36:23,783 - core.nodes - INFO - 准备模型输入，文本长度: 255
+2025-09-05 21:36:23,784 - core.nodes - ERROR - 准备模型输入时发生错误: full() received an invalid combination of arguments - got (tuple, NoneType, dtype=torch.dtype), but expected one of:
+ * (tuple of ints size, Number fill_value, *, tuple of names names, torch.dtype dtype = None, torch.layout layout = None, torch.device device = None, bool pin_memory = False, bool requires_grad = False)
+ * (tuple of ints size, Number fill_value, *, Tensor out = None, torch.dtype dtype = None, torch.layout layout = None, torch.device device = None, bool pin_memory = False, bool requires_grad = False)
+
+2025-09-05 21:36:23,784 - core.nodes - ERROR - 无法准备模型输入
+2025-09-05 22:37:54,834 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-05 22:37:59,420 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-05 22:37:59,420 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-05 22:37:59,420 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-05 22:37:59,421 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-05 22:37:59,421 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-05 22:39:21,165 - core.nodes - INFO - 处理文本长度: 174
+2025-09-05 22:39:21,169 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 68])
+2025-09-05 22:39:21,169 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 68])
+2025-09-05 22:39:21,169 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 68]), kwargs={'max_new_tokens': 200, 'temperature': 0.7, 'do_sample': True, 'pad_token_id': None, 'eos_token_id': None, 'past_key_values': None, 'use_cache': False}
+2025-09-05 22:40:16,569 - core.nodes - INFO - 开始综合信息
+2025-09-05 22:40:16,569 - core.nodes - WARNING - 文档数量过多，仅使用前 10 个文档
+2025-09-05 22:40:16,569 - core.nodes - INFO - 综合信息上下文长度: 3068
+2025-09-05 22:40:16,569 - core.nodes - INFO - 准备模型输入，文本长度: 3255
+2025-09-05 22:40:16,570 - core.nodes - WARNING - 输入文本过长，已截断为 2048 字符
+2025-09-05 22:40:16,570 - core.nodes - INFO - 处理文本长度: 2051
+2025-09-05 22:40:16,583 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 1416])
+2025-09-05 22:40:16,584 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 1416])
+2025-09-05 22:40:16,584 - core.nodes - INFO - 模型输入准备完成，输入ID形状: torch.Size([1, 1416])
+2025-09-05 22:40:16,584 - core.nodes - INFO - 开始模型生成...
+2025-09-05 22:40:16,584 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 1416]), kwargs={'max_new_tokens': 300, 'temperature': 0.7, 'do_sample': True, 'pad_token_id': None, 'eos_token_id': None, 'past_key_values': None, 'use_cache': False}
+2025-09-05 22:46:55,537 - core.nodes - INFO - 模型生成完成
+2025-09-05 22:46:55,541 - core.nodes - INFO - 综合信息完成，响应长度: 2448
+2025-09-05 22:46:55,543 - core.nodes - INFO - 开始生成报告
+2025-09-05 22:46:55,543 - core.nodes - INFO - 准备模型输入，文本长度: 2692
+2025-09-05 22:46:55,543 - core.nodes - WARNING - 输入文本过长，已截断为 2048 字符
+2025-09-05 22:46:55,543 - core.nodes - INFO - 处理文本长度: 2051
+2025-09-05 22:46:55,557 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 1410])
+2025-09-05 22:46:55,557 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 1410])
+2025-09-05 22:46:55,557 - core.nodes - INFO - 模型输入准备完成，输入ID形状: torch.Size([1, 1410])
+2025-09-05 22:46:55,557 - core.nodes - INFO - 开始模型生成...
+2025-09-05 22:46:55,557 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 1410]), kwargs={'max_new_tokens': 800, 'temperature': 0.7, 'do_sample': True, 'pad_token_id': None, 'eos_token_id': None, 'past_key_values': None, 'use_cache': False}
+2025-09-05 23:05:15,817 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-05 23:05:20,403 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-05 23:05:20,403 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-05 23:05:20,404 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-05 23:05:20,404 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-05 23:05:20,404 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-05 23:06:30,242 - core.nodes - INFO - 处理文本长度: 174
+2025-09-05 23:06:30,245 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 68])
+2025-09-05 23:06:30,246 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 68])
+2025-09-05 23:06:30,246 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 68]), kwargs={'max_new_tokens': 200, 'temperature': 0.7, 'do_sample': True, 'pad_token_id': None, 'eos_token_id': None, 'past_key_values': None, 'use_cache': False}
+2025-09-05 23:07:26,174 - core.nodes - INFO - 开始综合信息
+2025-09-05 23:07:26,175 - core.nodes - WARNING - 文档数量过多，仅使用前 10 个文档
+2025-09-05 23:07:26,175 - core.nodes - INFO - 综合信息上下文长度: 2239
+2025-09-05 23:07:26,175 - core.nodes - INFO - 准备模型输入，文本长度: 2426
+2025-09-05 23:07:26,175 - core.nodes - WARNING - 输入文本过长，已截断为 2048 字符
+2025-09-05 23:07:26,175 - core.nodes - INFO - 处理文本长度: 2051
+2025-09-05 23:07:26,189 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 1376])
+2025-09-05 23:07:26,190 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 1376])
+2025-09-05 23:07:26,190 - core.nodes - INFO - 模型输入准备完成，输入ID形状: torch.Size([1, 1376])
+2025-09-05 23:07:26,190 - core.nodes - INFO - 开始模型生成...
+2025-09-05 23:07:26,190 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 1376]), kwargs={'max_new_tokens': 300, 'temperature': 0.7, 'do_sample': True, 'pad_token_id': None, 'eos_token_id': None, 'past_key_values': None, 'use_cache': False}
+2025-09-05 23:13:54,584 - core.nodes - INFO - 模型生成完成
+2025-09-05 23:13:54,588 - core.nodes - INFO - 综合信息完成，响应长度: 2566
+2025-09-05 23:13:54,591 - core.nodes - INFO - 开始生成报告
+2025-09-05 23:13:54,591 - core.nodes - INFO - 准备模型输入，文本长度: 2810
+2025-09-05 23:13:54,591 - core.nodes - WARNING - 输入文本过长，已截断为 2048 字符
+2025-09-05 23:13:54,591 - core.nodes - INFO - 处理文本长度: 2051
+2025-09-05 23:13:54,611 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 1376])
+2025-09-05 23:13:54,611 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 1376])
+2025-09-05 23:13:54,611 - core.nodes - INFO - 模型输入准备完成，输入ID形状: torch.Size([1, 1376])
+2025-09-05 23:13:54,611 - core.nodes - INFO - 开始模型生成...
+2025-09-05 23:13:54,611 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 1376]), kwargs={'max_new_tokens': 800, 'temperature': 0.7, 'do_sample': True, 'pad_token_id': None, 'eos_token_id': None, 'past_key_values': None, 'use_cache': False}
+2025-09-05 23:34:07,302 - core.nodes - INFO - 模型生成完成
+2025-09-05 23:34:07,307 - core.nodes - INFO - 报告生成完成，响应长度: 3439
+2025-09-06 10:27:04,243 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 10:27:08,054 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 10:27:08,055 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 10:27:08,055 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 10:27:08,055 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 10:27:08,056 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-06 10:28:25,490 - core.nodes - INFO - 处理文本长度: 174
+2025-09-06 10:28:25,490 - core.nodes - ERROR - 准备模型输入时发生错误: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.
+2025-09-06 10:28:26,065 - core.nodes - INFO - 开始综合信息
+2025-09-06 10:28:26,066 - core.nodes - WARNING - 文档数量过多，仅使用前 10 个文档
+2025-09-06 10:28:26,066 - core.nodes - INFO - 综合信息上下文长度: 3345
+2025-09-06 10:28:26,066 - core.nodes - INFO - 准备模型输入，文本长度: 3533
+2025-09-06 10:28:26,066 - core.nodes - WARNING - 输入文本过长，已截断为 2005 字符
+2025-09-06 10:28:26,066 - core.nodes - INFO - 处理文本长度: 2005
+2025-09-06 10:28:26,066 - core.nodes - ERROR - 准备模型输入时发生错误: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.
+2025-09-06 10:28:26,066 - core.nodes - ERROR - 无法准备模型输入
+2025-09-06 10:28:26,067 - core.nodes - INFO - 开始生成报告
+2025-09-06 10:28:26,067 - core.nodes - INFO - 准备模型输入，文本长度: 256
+2025-09-06 10:28:26,067 - core.nodes - INFO - 处理文本长度: 251
+2025-09-06 10:28:26,067 - core.nodes - ERROR - 准备模型输入时发生错误: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.
+2025-09-06 10:28:26,067 - core.nodes - ERROR - 无法准备模型输入
+2025-09-06 10:45:46,181 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 10:45:50,809 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 10:45:50,809 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 10:45:50,809 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 10:45:50,810 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 10:45:50,810 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-06 10:46:08,049 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 10:46:12,696 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 10:46:12,696 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 10:46:12,697 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 10:46:12,697 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 10:46:12,698 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-06 10:46:43,232 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 10:46:47,815 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 10:46:47,816 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 10:46:47,816 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 10:46:47,816 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 10:46:47,817 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-06 10:47:30,066 - core.nodes - INFO - 处理文本长度: 174
+2025-09-06 10:47:30,066 - core.nodes - ERROR - 分词器没有设置填充令牌
+2025-09-06 10:47:30,611 - core.nodes - INFO - 开始综合信息
+2025-09-06 10:47:30,611 - core.nodes - WARNING - 文档数量过多，仅使用前 10 个文档
+2025-09-06 10:47:30,611 - core.nodes - INFO - 综合信息上下文长度: 3345
+2025-09-06 10:47:30,611 - core.nodes - INFO - 准备模型输入，文本长度: 3532
+2025-09-06 10:47:30,612 - core.nodes - WARNING - 输入文本过长，已截断为 2005 字符
+2025-09-06 10:47:30,612 - core.nodes - INFO - 处理文本长度: 2005
+2025-09-06 10:47:30,612 - core.nodes - ERROR - 分词器没有设置填充令牌
+2025-09-06 10:47:30,612 - core.nodes - ERROR - 无法准备模型输入
+2025-09-06 10:47:30,613 - core.nodes - INFO - 开始生成报告
+2025-09-06 10:47:30,613 - core.nodes - INFO - 准备模型输入，文本长度: 255
+2025-09-06 10:47:30,613 - core.nodes - INFO - 处理文本长度: 251
+2025-09-06 10:47:30,613 - core.nodes - ERROR - 分词器没有设置填充令牌
+2025-09-06 10:47:30,613 - core.nodes - ERROR - 无法准备模型输入
+2025-09-06 10:54:50,224 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 10:54:53,871 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 10:54:53,871 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 10:54:53,872 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 10:54:53,872 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 10:54:53,872 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-06 10:55:27,694 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 10:55:32,237 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 10:55:32,237 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 10:55:32,237 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 10:55:32,237 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 10:55:32,238 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-06 10:57:28,963 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 10:57:33,579 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 10:57:33,579 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 10:57:33,579 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 10:57:33,579 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 10:57:33,580 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-06 11:01:53,152 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-06 11:01:57,734 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-06 11:01:57,734 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-06 11:01:57,735 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-06 11:01:57,735 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-06 11:01:57,735 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-08 10:04:48,295 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-08 10:05:54,107 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/models/BAAI/bge-large-zh-v1.5
+2025-09-08 10:05:58,730 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - The model is automatically converting to bf16 for faster inference. If you want to disable the automatic precision, please manually add bf16/fp16/fp32=True to "AutoModelForCausalLM.from_pretrained".
+2025-09-08 10:05:58,730 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Try importing flash-attention for faster inference...
+2025-09-08 10:05:58,731 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rotary fail, please install FlashAttention rotary to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/rotary
+2025-09-08 10:05:58,731 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn rms_norm fail, please install FlashAttention layer_norm to get higher efficiency https://github.com/Dao-AILab/flash-attention/tree/main/csrc/layer_norm
+2025-09-08 10:05:58,731 - transformers_modules.Qwen-7B-Chat.modeling_qwen - WARNING - Warning: import flash_attn fail, please install FlashAttention to get higher efficiency https://github.com/Dao-AILab/flash-attention
+2025-09-08 10:07:28,620 - core.nodes - INFO - 处理文本长度: 174
+2025-09-08 10:07:28,624 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 72])
+2025-09-08 10:07:28,624 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 72])
+2025-09-08 10:07:28,624 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 72]), kwargs={'max_new_tokens': 512, 'temperature': 0.7, 'do_sample': True, 'top_p': 0.9, 'pad_token_id': 151643, 'eos_token_id': 151643, 'use_cache': True}
+2025-09-08 10:07:28,784 - core.nodes - ERROR - 模型生成错误: 'NoneType' object has no attribute 'shape'
+2025-09-08 10:07:28,789 - core.nodes - ERROR - 错误详情: Traceback (most recent call last):
+  File "/home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/core/nodes.py", line 541, in safe_model_generate
+    result = model.generate(
+             ^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 1274, in generate
+    return super().generate(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/transformers/generation/utils.py", line 2539, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/transformers/generation/utils.py", line 2867, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 1058, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 846, in forward
+    kv_seq_len += past_key_values[0][0].shape[1]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+2025-09-08 10:07:29,258 - core.nodes - INFO - 开始综合信息
+2025-09-08 10:07:29,258 - core.nodes - WARNING - 文档数量过多，仅使用前 10 个文档
+2025-09-08 10:07:29,258 - core.nodes - INFO - 综合信息上下文长度: 3345
+2025-09-08 10:07:29,258 - core.nodes - INFO - 准备模型输入，文本长度: 3532
+2025-09-08 10:07:29,258 - core.nodes - WARNING - 输入文本过长，已截断为 2005 字符
+2025-09-08 10:07:29,258 - core.nodes - INFO - 处理文本长度: 2005
+2025-09-08 10:07:29,270 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 1336])
+2025-09-08 10:07:29,271 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 1336])
+2025-09-08 10:07:29,271 - core.nodes - INFO - 模型输入准备完成，输入ID形状: torch.Size([1, 1336])
+2025-09-08 10:07:29,271 - core.nodes - INFO - 开始模型生成...
+2025-09-08 10:07:29,271 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 1336]), kwargs={'max_new_tokens': 512, 'temperature': 0.7, 'do_sample': True, 'top_p': 0.9, 'pad_token_id': 151643, 'eos_token_id': 151643, 'use_cache': True}
+2025-09-08 10:07:29,273 - core.nodes - ERROR - 模型生成错误: 'NoneType' object has no attribute 'shape'
+2025-09-08 10:07:29,276 - core.nodes - ERROR - 错误详情: Traceback (most recent call last):
+  File "/home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/core/nodes.py", line 541, in safe_model_generate
+    result = model.generate(
+             ^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 1274, in generate
+    return super().generate(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/transformers/generation/utils.py", line 2539, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/transformers/generation/utils.py", line 2867, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 1058, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 846, in forward
+    kv_seq_len += past_key_values[0][0].shape[1]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+2025-09-08 10:07:29,276 - core.nodes - ERROR - 模型生成返回None
+2025-09-08 10:07:29,277 - core.nodes - INFO - 开始生成报告
+2025-09-08 10:07:29,277 - core.nodes - INFO - 准备模型输入，文本长度: 255
+2025-09-08 10:07:29,277 - core.nodes - INFO - 处理文本长度: 251
+2025-09-08 10:07:29,279 - core.nodes - INFO - 分词后输入形状: torch.Size([1, 144])
+2025-09-08 10:07:29,279 - core.nodes - INFO - 输入准备完成: input_ids形状=torch.Size([1, 144])
+2025-09-08 10:07:29,279 - core.nodes - INFO - 模型输入准备完成，输入ID形状: torch.Size([1, 144])
+2025-09-08 10:07:29,279 - core.nodes - INFO - 开始模型生成...
+2025-09-08 10:07:29,279 - core.nodes - INFO - 模型生成参数: input_ids形状=torch.Size([1, 144]), kwargs={'max_new_tokens': 512, 'temperature': 0.7, 'do_sample': True, 'top_p': 0.9, 'pad_token_id': 151643, 'eos_token_id': 151643, 'use_cache': True}
+2025-09-08 10:07:29,281 - core.nodes - ERROR - 模型生成错误: 'NoneType' object has no attribute 'shape'
+2025-09-08 10:07:29,283 - core.nodes - ERROR - 错误详情: Traceback (most recent call last):
+  File "/home/Jimmy/Advanced_Medical_Research_Assistant_and_Report_Generator/core/nodes.py", line 541, in safe_model_generate
+    result = model.generate(
+             ^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 1274, in generate
+    return super().generate(
+           ^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/transformers/generation/utils.py", line 2539, in generate
+    result = self._sample(
+             ^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/transformers/generation/utils.py", line 2867, in _sample
+    outputs = self(**model_inputs, return_dict=True)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 1058, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/miniconda3/envs/MedKnowledge_Assistant/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/Jimmy/.cache/huggingface/modules/transformers_modules/Qwen-7B-Chat/modeling_qwen.py", line 846, in forward
+    kv_seq_len += past_key_values[0][0].shape[1]
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'shape'
+
+2025-09-08 10:07:29,284 - core.nodes - ERROR - 模型生成返回None
