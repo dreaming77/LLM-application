@@ -1,6 +1,6 @@
 # **法律知识问答系统**
 
-技术：Langchain、RAG Fusion、prompt、Streamlit、FAISS、HuggingFace
+技术：Langchain、RAG Fusion、FAISS
 
 问答模型：Qwen2.5-3B-Instruct
 
@@ -80,5 +80,6 @@ $$
 
 
 7. 项目运行`streamlit run app.py`
+
 
 
