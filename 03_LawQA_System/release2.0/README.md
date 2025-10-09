@@ -27,13 +27,17 @@ $$
 
 ![image-2006205729297](dataset/dir_1.png)
 
-> pycharm 自定义的包找不到的解决方案。文件 - 设置 - 项目 -项目结构 - 添加内容根，把需要的路径添加到内容根里面。
+> pycharm 自定义的包找不到的解决方案。
 >
-> 否则导入config文件会报错
+> 1. 文件 - 设置 - 项目 -项目结构 - 添加内容根，把需要的路径添加到内容根里面。
 >
-> ```python
-> from config.xxx import xxxx
-> ```
+>    否则导入config文件会报错
+>
+>    ```python
+>    from config.xxx import xxxx
+>    ```
+>
+> 2. 终端命令需要在根目录下运行才能找到文件路径。
 
 ## 项目结构
 
@@ -80,6 +84,7 @@ $$
 
 
 7. 项目运行`streamlit run app.py`
+
 
 
 
