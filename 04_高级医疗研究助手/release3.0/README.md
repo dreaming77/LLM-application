@@ -1,8 +1,8 @@
-# **高级医疗研究助手and报告生成器**
+# **高级医疗研究助手**
 
-技术栈：LangGraph  + Milvus + LangChain  + RAG +Streamlit
+技术栈：
 
-基座模型：DeepSeek-R1-0528-Qwen3-8B
+基座模型：
 
 嵌入模型：bge-large-zh-v1.5
 
@@ -14,96 +14,168 @@ $$
 平平无奇。
 $$
 
-## 微调目的
 
-	微调Qwen-7B-chat模型构建一个中文医疗对话模型。在基座模型上选择在中文表现优秀且适合对话任务的Qwen模型，且对指令遵循和对话任务有良好的支持。
-
-| 模型         | 诊断准确率 | 回复相关性 | 训练速度   |
-| :----------- | :--------- | :--------- | :--------- |
-| Qwen-7B+LoRA | 83.2%      | **93.4%**  | 6.5h/epoch |
-|              |            |            |            |
 
 ## 内容概述
 
-1. #### 数据集预处理`pre_possesion.py`
-
-1）读取两个CSV文件（问题和回答），构建问题ID到问题内容的映射，再按问题ID分组合并多个回答
-
-2）定义不同科室的系统提示模板
-
-3）实现混合科室识别函数，通过**实体识别和关键词匹配确定问题所属科室**（**双重识别机制**）
-
-4） 遍历每个问题，确定科室，构建对话结构
-
-5）将处理后的数据写入JSONL文件
-
-> 核心功能：
->
-> - **科室识别**：根据用户问题自动分类到医疗科室（妇产科/儿科/骨科等）
-> - **数据转换**：将原始的CSV格式医疗问答数据转换为训练大模型用的JSONL格式
-> - **内容增强**：添加科室专属系统提示语和医疗安全声明
-
-2. #### 模型微调
-
-> 首先，定义数据预处理函数（tokenize_function），用于将文本转换为模型输入。
->
-> 随后，配置QLoRA、训练参数和训练器。
->
-> 开始训练。
-
-1）加载数据集后，做一个训练集、测试集划分，再转换成Hugging Face Dataset格式。
-
-2）利用格式化对话函数将数据集转为符合模型输入要求的文本，整合对话上下文（区分不同角色，如系统、用户、助手）并应用模型特定模板。
-
-3）加载分词器tokenizer、模型model。使用分词器给数据集分词。
-
-4）LoRA配置，应用到模型model上。
-
-5）最后配置训练参数、数据收集器、优化器，便可以训练。
-
-3. #### 模型量化
-
-4-bit 量化配置（BitsAndBytesConfig）
-
-> 4-bit 量化仅用于**存储权重**，实际计算（如矩阵乘法、激活值处理）仍需较高精度（否则会导致数值溢出或精度丢失）。
-
-3. #### 微调模型结束后
-
-> **模型评估**：使用测试集评估模型性能。
-> **保存模型**：保存微调后的模型和tokenizer。
-> **推理测试**：使用微调后的模型进行推理测试。
-> 
->
-> 
+#### 
 
 
 
+## Milvus库
 
-# 高级医疗研究助手前端
+1. 安装 Docker 和 Docker Compose
+2. 下载Milvus-standalone的Docker Compose文件（/docker-compose.yml）
+
+```
+wget https://github.com/milvus-io/milvus/releases/download/v2.3.0/milvus-standalone-docker-compose.yml -O docker-compose.yml
+```
+
+3. 启动milvus服务
+
+```
+# 启动 Milvus 服务（在后台运行）
+sudo docker-compose up -d
+
+# 查看服务状态
+sudo docker-compose ps
+```
+
+4. 查看 Milvus 的存储后端，MinIO 存储了 Milvus 的实际数据文件。MinIO 的 Web 界面默认运行在 9000 端口，可以通过浏览器访问 `http://localhost:8000`（用户名: minioadmin, 密码: minioadmin）来查看存储的文件。
+5. 数据预处理`milvus/milvus_processor.py`
+
+```plaintext
+总体流程：
+  main函数启动
+      ↓
+  初始化MilvusDataProcessor
+      ↓ （调用__init__）
+  连接Milvus（_connect_milvus） + 加载Embedding模型
+      ↓
+  创建Milvus集合（create_collection：定义Schema → 删旧集合→建索引）
+      ↓
+  处理JSONL文件（process_jsonl_file）
+      ↓ 循环每一行JSON
+          单条数据清洗（_process_single_record）
+          ↓ 积累到batch_size
+              批量生成Embedding（_get_embedding）
+                ↓
+              批量插入Milvus（_insert_batch：批量失败则单条插入）
+      ↓ 文件处理完成
+  加载集合到内存 + 查询集合实体数（get_collection_info）
+      ↓
+  测试相似搜索（search_similar_questions）
+      ↓
+  关闭Milvus连接（close）
+      ↓
+  程序结束
+```
+
+> 数据集是jsonl格式，**每行一个独立 JSON 对象**。
+
+1）定义数据字段id 、question、answer、label、related_diseases、score、question_vector（1024维度，用于向量查询）。
+
+2）单条数据简单清洗，验证字段是否存在，不存在则跳过。
+
+## 后端 - LangGraph
+
+1. **状态定义**
+
+> 状态 → 状态管理器 → 状态序列化器 → 状态序验证器。
+
+1）`state.py` 是整个状态管理的基础，它通过 `GraphState` 这个 `TypedDict` 定义了工作流中需要跟踪的所有状态字段。**作用**：规定了状态的 “形状”，所有后续组件（管理器、序列化器、验证器）都基于此结构进行操作，确保状态数据的一致性。
+
+2）`stateManager.py` 负责状态的创建、更新、查询和销毁，是状态的核心操作入口。
+
+3）`stateSerializer.py` 负责将 `GraphState` 实例在 “内存对象” 和 “可存储 / 传输格式（如 JSON）” 之间转换。
+
+4）`stateValidator.py` 负责验证状态的合法性和流程的正确性。
+
+2. **节点定义**
+
+> 医疗意图识别 → 查询重写 → 文档检索 → RAG Fusion → 响应生成 → 响应优化。
+
+1）`medical_intent_detection_node` 负责分析用户查询的医疗意图（如诊断咨询、紧急建议等），提取关键医疗实体（疾病、症状、药物等）。
+
+2）`query_rewriting_node` 基于医疗意图和实体，负责生成多个与原始查询相关的重写查询，提升后续文档检索的全面性。
+
+3）`document_retrieval_node` 负责使用重写后的查询生成向量，从 Milvus 向量数据库中检索相关医疗文档（问题 - 答案对）。<u>注意要熟悉去重策略</u> ⚠️
+
+4）`rag_fusion_node` 负责对多个查询的检索结果进行加权融合（使用 Reciprocal Rank Fusion 算法），提升文档相关性排序。
+
+5）`response_generation_node` 负责基于融合后的上下文、用户查询和医疗意图，生成初始回答，并提取引用来源、计算置信度。
+
+6）`response_refinement_node` 负责优化初始回答的格式（如修复空格、标点），根据风险级别（如高风险情况）调整内容，提升安全性和专业性。
+
+7）`node_manager.py` 负责注册所有节点，建立节点名称与函数的映射，通过`execute_node`方法根据当前状态的 “next_step” 调用对应节点，确保流程按预定顺序执行。
+
+3. **工作流定义**
+
+> 用于构建和管理医疗研究助手的工作流系统。
+
+1）`graph_definition.py` 专注于**医疗研究助手工作流图的定义与配置**。
+
+2）`workflow_manager.py` 该文件实现了**工作流的执行、监控和会话管理**。
+
+4. **主函数 `main.py`**
+
+该文件是整个医疗研究助手 API 服务的入口，主要负责 FastAPI 应用的初始化、配置、路由定义及服务器启动，核心功能包括：
+
+- **应用初始化**：定义了 FastAPI 应用实例，配置了标题、描述、版本等元信息，并通过`lifespan`上下文管理器实现系统启动初始化（如加载模型、工作流）和关闭清理逻辑。
+
+- **CORS 配置**：添加跨域资源共享中间件，允许所有来源（生产环境需限制）的请求访问 API。
+
+- 路由定义
+
+  ：包含多个 API 端点，覆盖核心功能：
+
+  - 基础信息接口（根路径`/`、系统信息`/api/system/info`、默认配置`/api/config/default`）；
+  - 健康检查接口（基础健康检查`/health`、详细健康检查`/api/health/detail`、模型健康检查`/api/health/models`等）；
+  - 核心业务接口（处理医疗查询`/api/query`、继续对话`/api/conversation/{session_id}/continue`、会话状态管理`/api/session/{session_id}`等）。
+
+- **错误处理**：自定义了 HTTP 异常和通用异常的处理器，统一返回格式。
+
+- **服务器启动**：通过`uvicorn`启动服务，配置主机、端口、工作进程数等参数。
+
+5. **医疗研究控制器`controller.py`**
+
+该文件定义了`MedicalResearchController`类，作为 API 的核心控制器，负责协调模型、工作流、状态管理等组件处理业务逻辑，核心功能包括：
+
+- **初始化与关闭**：`initialize`方法负责初始化模型和工作流，`close`方法负责资源清理。
+- **健康检查**：`health_check`方法整合 Milvus 数据库、工作流、模型的健康状态，返回系统整体健康信息；`model_health_check`专门检查嵌入模型和生成模型的可用性。
+- **医疗查询处理**：`process_medical_query`方法接收用户查询，验证合法性后通过工作流管理器处理查询并返回结果。
+- **会话管理**：支持对话延续（`continue_conversation`，基于会话 ID 维持对话历史）、会话状态查询（`get_session_status`）、会话中断（`interrupt_processing`）等功能。
+- **系统信息**：`get_system_info`返回系统版本、工作流信息等基础数据。
+
+该控制器是连接 API 接口与底层业务逻辑（模型、工作流、数据库）的中间层，实现了请求的验证、转发和结果处理。
+
+```
+后端启动命令：
+    uvicorn main:app --reload --host 0.0.0.0 --port 8888
+```
+
+
+
+## 前端
 
 基于 Vue 3 + Element Plus 的医疗研究助手前端界面。
 
-## 功能特点
+![image-20250806205729297](data/dj.png)
 
-- 用户友好的医疗研究界面
-- 实时研究进度显示
-- 研究报告生成与下载
-- 响应式设计，适配各种设备
+主要文件内容如下：
 
-## 项目设置
+1. 前端入口文件（main.js）
+2. 路由配置（router/index.js）
+3. 状态管理（stores/index.js 和使用Pinia）
+4. 服务层（services/api.js 用于调用后端API）
+5. 视图文件（views/Home.vue, views/Query.vue, views/History.vue等）
+6. 组件文件（components/NavBar.vue, components/QueryForm.vue, components/ResponseDisplay.vue等）
+7. 样式文件（styles/global.css）
+8. 静态资源（index.html）
+9. 配置文件（vite.config.js, package.json）
 
 ```sh
-npm install
-
-
-
-
-计划的工作流如下：
-
-开始 -> 医疗意图识别 -> 查询重写 -> 文档检索 -> RAG Fusion -> 响应生成 -> 响应精炼 -> 最终化 -> 结束
-
 前端启动命令：cd frontend/
-	npm install
-	npm run dev -- --host 0.0.0.0 --port 3000
-后端启动命令：
-	uvicorn main:app --reload --host 0.0.0.0 --port 8888
+    npm install
+    npm run dev -- --host 0.0.0.0 --port 3000
+```
