@@ -1,0 +1,6 @@
+{
+  "total_samples": 177703,
+  "collection_name": "medical_knowledge",
+  "batch_size": 50,
+  "device_used": "cuda:1"
+}

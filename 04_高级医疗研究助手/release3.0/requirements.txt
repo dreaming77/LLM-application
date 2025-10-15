@@ -1,0 +1,81 @@
+
+
+总体目录结构：
+Advanced_Medical_Research_Assistant_and_Report_Generator/
+        ├── app/
+        │   ├── config.py
+        │   └── dependencies.py
+        ├── config/
+        │   ├── settings.py
+        │   └── validator.py
+        ├── core/
+        │   ├── api/
+        │   │    └── controller.py
+        │   ├── nodes/
+        │   │     ├── document_retrieval.py
+        │   │     ├── error_handling.py
+        │   │     ├── finalize.py
+        │   │     ├── medical_intent_detection.py
+        │   │     ├── query_rewriting.py
+        │   │     ├── rag_fusion.py
+        │   │     ├── response_generation.py
+        │   │     ├── response_refinement.py
+        │   │     └── safety_check.py
+        │   ├── state/
+        │   │     ├── state.py
+        │   │     ├── state_manager.py
+        │   │     ├── state_serializer.py
+        │   │     └── state_validator.py
+        │   ├── workflow/
+        │   │     ├── graph_definition.py
+        │   │     └── workflow_manager.py
+        │   ├── milvus_client.py
+        │   ├── milvus_processor.py
+        │   ├── model_manager.py
+        │   └── node_manager.py
+        ├── dataset/
+        │   ├── huatuo-testdataset/
+        │   ├── huatuo_dataset/
+        │   └── processed/
+        ├── docker/
+        │   └── docker-compose.yml
+        ├── frontend/
+        │   ├── public/
+        │   │     └── index.html
+        │   ├──  src/
+        │   │     ├── components/
+        │   │     │    ├── AppFooter.vue
+        │   │     │    ├── NavBar.vue
+        │   │     │    ├── QueryForm.vue
+        │   │     │    ├── ResponseDisplay.vue
+        │   │     │    └── SystemStatusWidget.vue
+        │   │     ├── router/
+        │   │     │    └── index.js
+        │   │     ├── services/
+        │   │     │    └── api.js
+        │   │     ├── styles/
+        │   │     ├── stores/
+        │   │     │    └── index.js
+        │   │     ├── views/
+        │   │     │   ├── History.vue
+        │   │     │   ├── Home.vue
+        │   │     │   ├── Query.vue
+        │   │     │   └── SystemStatus.vue
+        │   │     ├── App.vue
+        │   │     └── main.js
+        │   │
+        │   ├── index.html
+        │   ├── nginx.config
+        │   ├── package.json
+        │   ├── package-lock.json
+        │   └── vite.config.js
+        ├── models/
+        │   ├── BAAI/
+        │   └── Qwen2.5-7B-Instruct/
+        ├── volumes/
+        │   ├── etcd/
+        │   ├── milvus/
+        │   └── minio/
+        └── main.py
+
+
