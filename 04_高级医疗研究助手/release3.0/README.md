@@ -8,7 +8,7 @@
 
 数据集：CHuatuo-26M Dataset数据集
 
-![image-20250806205729297](data/ai.png)
+![image-20250806205729297](dataset/ai.png)
 
 $$
 平平无奇。
@@ -160,7 +160,7 @@ sudo docker-compose ps
 
 基于 Vue 3 + Element Plus 的医疗研究助手前端界面。
 
-![image-20250806205729297](data/dj.png)
+![image-20250806205729297](dataset/dj.png)
 
 主要文件内容如下：
 
