@@ -6,6 +6,22 @@
 
 数据集：Twitter_complaints [地址](https://huggingface.co/datasets/ought/raft) 将data文件夹里的csv文件下载到数据集中。
 
+>
+>`distilbert-base-uncased` 基于 **DistilBERT** 架构，是 BERT 模型的 “蒸馏版”。
+>
+>“uncased” 表示模型在预训练时对文本进行了 “不区分大小写” 处理（所有输入文本会被转为小写）。
+>
+>**模型规模**：
+>
+>- 层数：6 层（仅为 BERT-base 的一半，BERT-base 为 12 层）。
+>
+>- 隐藏层维度：768（与 BERT-base 一致）。
+>
+>- 注意力头数：12（与 BERT-base 一致）。
+>
+>- 参数量：约 6600 万（BERT-base 为 1.1 亿，参数量减少约 40%）。
+>
+
 ![image-20250806205729297](ai.jpeg)
 
 $$
