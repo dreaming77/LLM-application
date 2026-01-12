@@ -1,4 +1,4 @@
-# **高级医疗研究助手**
+# **基于Qwen大模型的医疗病情问答系统**
 
 技术栈：LangGraph｜LangChain｜Milvus｜Qwen｜FastAPI｜Vue3 
 
@@ -9,10 +9,6 @@
 数据集：CHuatuo-26M Dataset数据集
 
 ![image-20250806205729297](dataset/ai.png)
-
-$$
-平平无奇。
-$$
 
 
 
