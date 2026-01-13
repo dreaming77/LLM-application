@@ -14,9 +14,9 @@
 
 ## 内容概述
 
-- 成功将大语言模型、向量数据库、智能工作流等前沿技术无缝集成，构建了完整的医疗智能研究解决方案。
-- 通过LangGraph实现的多节点工作流管理，突破了传统单一模型处理的局限性，实现了医疗查询的精细化、专业化处理。
-- Milvus向量数据库与RAG Fusion技术的结合，为医疗知识检索提供了新的效率和质量标准。
+- 成功将大语言模型、向量数据库、智能工作流等前沿技术无缝集成，构建了完整的智能家居研究解决方案。
+- 通过LangGraph实现的多节点工作流管理，突破了传统单一模型处理的局限性，实现了用户查询的精细化、专业化处理。
+- Milvus向量数据库与RAG Fusion技术的结合，为家庭设备知识检索提供了新的效率和质量标准。
 
 
 
@@ -91,17 +91,17 @@ sudo docker-compose ps
 
 2. **节点定义**
 
-> 医疗意图识别 → 查询重写 → 文档检索 → RAG Fusion → 响应生成 → 响应优化。
+> 意图识别 → 查询重写 → 文档检索 → RAG Fusion → 响应生成 → 响应优化。
 
-1）`medical_intent_detection_node` 负责分析用户查询的医疗意图（如诊断咨询、紧急建议等），提取关键医疗实体（疾病、症状、药物等）。
+1）`medical_intent_detection_node` 负责分析用户查询的意图，提取关键实体
 
-2）`query_rewriting_node` 基于医疗意图和实体，负责生成多个与原始查询相关的重写查询，提升后续文档检索的全面性。
+2）`query_rewriting_node` 基于意图和实体，负责生成多个与原始查询相关的重写查询，提升后续文档检索的全面性。
 
-3）`document_retrieval_node` 负责使用重写后的查询生成向量，从 Milvus 向量数据库中检索相关医疗文档（问题 - 答案对）。<u>注意要熟悉去重策略</u> ⚠️
+3）`document_retrieval_node` 负责使用重写后的查询生成向量，从 Milvus 向量数据库中检索相关文档（问题 - 答案对）。<u>注意要熟悉去重策略</u> ⚠️
 
 4）`rag_fusion_node` 负责对多个查询的检索结果进行加权融合（使用 Reciprocal Rank Fusion 算法），提升文档相关性排序。
 
-5）`response_generation_node` 负责基于融合后的上下文、用户查询和医疗意图，生成初始回答，并提取引用来源、计算置信度。
+5）`response_generation_node` 负责基于融合后的上下文、用户查询和意图，生成初始回答，并提取引用来源、计算置信度。
 
 6）`response_refinement_node` 负责优化初始回答的格式（如修复空格、标点），根据风险级别（如高风险情况）调整内容，提升安全性和专业性。
 
@@ -109,15 +109,15 @@ sudo docker-compose ps
 
 3. **工作流定义**
 
-> 用于构建和管理医疗研究助手的工作流系统。
+> 用于构建和管研究助手的工作流系统。
 
-1）`graph_definition.py` 专注于**医疗研究助手工作流图的定义与配置**。
+1）`graph_definition.py` 专注于**工作流图的定义与配置**。
 
 2）`workflow_manager.py` 该文件实现了**工作流的执行、监控和会话管理**。
 
 4. **主函数 `main.py`**
 
-该文件是整个医疗研究助手 API 服务的入口，主要负责 FastAPI 应用的初始化、配置、路由定义及服务器启动，核心功能包括：
+该文件是整个问答助手 API 服务的入口，主要负责 FastAPI 应用的初始化、配置、路由定义及服务器启动，核心功能包括：
 
 - **应用初始化**：定义了 FastAPI 应用实例，配置了标题、描述、版本等元信息，并通过`lifespan`上下文管理器实现系统启动初始化（如加载模型、工作流）和关闭清理逻辑。
 
@@ -129,19 +129,19 @@ sudo docker-compose ps
 
   - 基础信息接口（根路径`/`、系统信息`/api/system/info`、默认配置`/api/config/default`）；
   - 健康检查接口（基础健康检查`/health`、详细健康检查`/api/health/detail`、模型健康检查`/api/health/models`等）；
-  - 核心业务接口（处理医疗查询`/api/query`、继续对话`/api/conversation/{session_id}/continue`、会话状态管理`/api/session/{session_id}`等）。
+  - 核心业务接口（处理查询`/api/query`、继续对话`/api/conversation/{session_id}/continue`、会话状态管理`/api/session/{session_id}`等）。
 
 - **错误处理**：自定义了 HTTP 异常和通用异常的处理器，统一返回格式。
 
 - **服务器启动**：通过`uvicorn`启动服务，配置主机、端口、工作进程数等参数。
 
-5. **医疗研究控制器`controller.py`**
+5. **研究控制器`controller.py`**
 
 该文件定义了`MedicalResearchController`类，作为 API 的核心控制器，负责协调模型、工作流、状态管理等组件处理业务逻辑，核心功能包括：
 
 - **初始化与关闭**：`initialize`方法负责初始化模型和工作流，`close`方法负责资源清理。
 - **健康检查**：`health_check`方法整合 Milvus 数据库、工作流、模型的健康状态，返回系统整体健康信息；`model_health_check`专门检查嵌入模型和生成模型的可用性。
-- **医疗查询处理**：`process_medical_query`方法接收用户查询，验证合法性后通过工作流管理器处理查询并返回结果。
+- **查询处理**：`process_medical_query`方法接收用户查询，验证合法性后通过工作流管理器处理查询并返回结果。
 - **会话管理**：支持对话延续（`continue_conversation`，基于会话 ID 维持对话历史）、会话状态查询（`get_session_status`）、会话中断（`interrupt_processing`）等功能。
 - **系统信息**：`get_system_info`返回系统版本、工作流信息等基础数据。
 
@@ -156,7 +156,7 @@ sudo docker-compose ps
 
 ## 前端
 
-基于 Vue 3 + Element Plus 的医疗研究助手前端界面。
+基于 Vue 3 + Element Plus 的问答助手前端界面。
 
 ![image-20250806205729297](dataset/dj.png)
 
@@ -177,3 +177,4 @@ sudo docker-compose ps
     npm install
     npm run dev -- --host 0.0.0.0 --port 3000
 ```
+
