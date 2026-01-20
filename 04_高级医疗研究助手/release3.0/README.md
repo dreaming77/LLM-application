@@ -1,14 +1,10 @@
-# **基于Qwen大模型的医疗病情问答系统**
+# **基于Qwen大模型的智能家居问答系统**
 
 技术栈：LangGraph｜LangChain｜Milvus｜Qwen｜FastAPI｜Vue3 
 
 基座模型：Qwen2.5-7B-Instruct
 
 嵌入模型：bge-large-zh-v1.5
-
-数据集：CHuatuo-26M Dataset数据集
-
-![image-20250806205729297](dataset/ai.png)
 
 
 
@@ -177,4 +173,3 @@ sudo docker-compose ps
     npm install
     npm run dev -- --host 0.0.0.0 --port 3000
 ```
-
