@@ -152,9 +152,7 @@ sudo docker-compose ps
 
 ## 前端
 
-基于 Vue 3 + Element Plus 的问答助手前端界面。
 
-![image-20250806205729297](dataset/dj.png)
 
 主要文件内容如下：
 
